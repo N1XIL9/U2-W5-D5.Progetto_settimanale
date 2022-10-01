@@ -1,0 +1,615 @@
+body {
+    font-family: sans-serif;
+    background-image: url('../img/1.JPG');
+    background-size: cover;
+}
+
+#container-title {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#button-audio {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 32%, rgba(255, 126, 0, 1) 100%);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.but-container {
+    text-align: center;
+}
+
+#totalTime {
+    font-size: 2rem;
+    color: black;
+}
+
+h1 {
+    font-family: 'Bungee Spice', cursive;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 0.5rem;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 0;
+}
+
+.container {
+    margin: auto;
+    max-width: 862px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.icon-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 960px;
+}
+
+#grid>div {
+    margin: 7px 10px;
+    width: 115px;
+    height: 145px;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 32%, rgba(255, 126, 0, 1) 100%);
+    box-shadow: 1px 1px 5px 1px black;
+    border-radius: 10px;
+    border: 6px solid white;
+    perspective: 400px;
+
+}
+
+.timer {
+    padding: 10px 0;
+}
+
+.icon {
+    font-size: 111px;
+    text-align: center;
+    visibility: visible;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: wait;
+}
+
+.show {
+    animation-name: rotation-icon;
+    animation-duration: .5s;
+    background-color: white;
+    outline: 2px solid #3889c4;
+    border-radius: 6px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.find {
+    animation-name: guessed;
+    animation-duration: .5s;
+    background-color: #edad0c;
+    border: 3px solid #d80000;
+    border-radius: 10px;
+}
+
+.button {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d35100;
+    border-radius: 5px;
+    border: none;
+}
+
+.button:hover {
+    background-color: #d30f0f;
+    border: none;
+}
+
+#finishGame {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#finishGame.active {
+    display: flex;
+}
+
+#modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+#modal.active {
+    display: flex;
+}
+
+#modal h2 {
+    margin-top: 20px;
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+@keyframes guessed {
+    from {
+        transform: scale(10);
+        opacity: 0.3;
+    }
+
+    80% {
+        transform: scale(5);
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+@keyframes rotation-icon {
+    from {
+        transform: perspective(300px) rotate3d(3, 5, 0, 90deg);
+
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: perspective(300px) rotate3d(3, 5, 0, 5deg);
+        animation-timing-function: ease-in;
+    }
+
+    to {
+        transform: perspective(300px);
+        animation-timing-function: ease-in;
+    }
+}
+
+
+@media screen and (min-width: 320px) {
+    #totalTime {
+        font-size: 1rem;
+        color: black;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #button-audio {
+        font-size: 0.6rem;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 350px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #grid>div {
+        margin: 7px 4px;
+        width: 40px;
+        height: 51px;
+        background-color: #840f0f;
+        box-shadow: 1px 1px 5px 1px black;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    .button {
+        color: white;
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #d35100;
+
+        border-radius: 5px;
+        border: none;
+    }
+
+    #timer {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 36px;
+    }
+
+
+}
+
+@media screen and (min-width: 375px) {
+    #totalTime {
+        font-size: 1rem;
+        color: black;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 341px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #grid>div {
+        margin: 8px 2px;
+        width: 50px;
+        height: 63px;
+        background-color: #840f0f;
+        box-shadow: 1px 1px 5px 1px black;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    .button {
+        color: white;
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #d35100;
+
+        border-radius: 5px;
+        border: none;
+    }
+
+    #timer {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 45px;
+    }
+
+}
+
+@media screen and (min-width: 425px) {
+
+    .container {
+        margin: auto;
+        max-width: 425px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #grid>div {
+        margin: 7px 5px;
+        width: 54px;
+        height: 67px;
+        background-color: #840f0f;
+        box-shadow: 1px 1px 5px 1px black;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    .button {
+        color: white;
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #d35100;
+
+        border-radius: 5px;
+        border: none;
+    }
+
+    #timer {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 49px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #button-audio {
+        font-size: 0.6rem;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 768px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #grid>div {
+        margin: 5px 7px;
+        width: 103px;
+        height: 129px;
+        background-color: #840f0f;
+        box-shadow: 1px 1px 5px 1px black;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    .button {
+        color: white;
+        font-size: 29px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #d35100;
+
+        border-radius: 5px;
+        border: none;
+    }
+
+    #timer {
+        margin-top: 20px;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 95px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 750px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #grid>div {
+        margin: 5px 7px;
+        width: 103px;
+        height: 129px;
+        background-color: #840f0f;
+        box-shadow: 1px 1px 5px 1px black;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+    .button {
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 0px;
+        padding: 10px;
+        background-color: #d35100;
+        border-radius: 5px;
+        border: none;
+    }
+
+    #timer {
+        margin-top: 20px;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 100px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+
+    #button-audio {
+        font-size: 0.6rem;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 1440px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #grid>div {
+        margin: 10px 32px;
+        width: 141px;
+        height: 178px;
+        background-color: #840f0f;
+        box-shadow: 1px 1px 5px 1px black;
+        border-radius: 10px;
+        border: 2px solid white;
+    }
+
+    .button {
+        color: white;
+        font-size: 34px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #d35100;
+
+        border-radius: 5px;
+        border: none;
+    }
+
+    #timer {
+        margin-top: 20px;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 138px;
+    }
+
+}
+
+@media screen and (min-width: 2560px) {
+
+    h2 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    #button-audio {
+        font-size: 2rem;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-family: 'Bungee Spice', cursive;
+        text-align: center;
+        font-size: 6rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+        color: aliceblue;
+        margin-top: 0;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 2000px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #grid>div {
+        margin: 18px 24px;
+        width: 239px;
+        height: 295px;
+        background-color: #840f0f;
+        box-shadow: 1px 1px 5px 1px black;
+        border-radius: 10px;
+        border: 2px solid white;
+    }
+
+    .button {
+        color: white;
+        font-size: 4rem;
+        text-align: center;
+        margin-top: 10px;
+        padding: 20px;
+        background-color: #d35100;
+        border-radius: 5px;
+
+    }
+
+    #timer {
+        margin-top: 20px;
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 235px;
+    }
+
+}

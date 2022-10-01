@@ -99,6 +99,7 @@ p {
     animation-name: rotation-icon;
     animation-duration: .5s;
     background-color: white;
+    border: 1px solid black;
     border-radius: 7px;
     visibility: visible;
     opacity: 1;

@@ -573,16 +573,16 @@ p {
 
     .container {
         margin: auto;
-        max-width: 2000px;
+        max-width: 1440px;
         border-radius: 10px;
         margin-top: 20px;
         padding: 0;
     }
 
     #grid>div {
-        margin: 18px 24px;
-        width: 239px;
-        height: 295px;
+        margin: 10px 32px;
+        width: 141px;
+        height: 178px;
         background-color: #840f0f;
         box-shadow: 1px 1px 5px 1px black;
         border-radius: 10px;

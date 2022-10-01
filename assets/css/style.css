@@ -72,8 +72,6 @@ p {
     box-shadow: 1px 1px 5px 1px black;
     border-radius: 10px;
     border: 6px solid white;
-    perspective: 400px;
-
 }
 
 .timer {
@@ -99,7 +97,6 @@ p {
     animation-name: rotation-icon;
     animation-duration: .5s;
     background-color: white;
-    outline: 2px solid black;
     border-radius: 7px;
     visibility: visible;
     opacity: 1;
@@ -109,7 +106,7 @@ p {
     animation-name: guessed;
     animation-duration: .5s;
     background-color: #edad0c;
-    border: 2px solid #d80000;
+    outline: 2px solid #d80000;
     border-radius: 0px;
 }
 

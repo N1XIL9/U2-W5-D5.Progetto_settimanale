@@ -108,7 +108,7 @@ p {
     animation-name: guessed;
     animation-duration: .5s;
     background-color: #edad0c;
-    outline: 3px solid #d80000;
+    outline: 2px solid #d80000;
     border-radius: 10px;
 }
 

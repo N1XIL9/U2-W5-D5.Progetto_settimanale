@@ -26,7 +26,7 @@ let interval;
 
 function startTimer(){
   
-  let s = 600 ;
+  let s = 60 ;
   let timer = document.getElementById('timer');
     interval = setInterval(function(){
     timer.innerHTML = `Time: ${s} sec`;

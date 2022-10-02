@@ -5,8 +5,8 @@ body {
 }
 
 #container-title {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #button-audio {
@@ -208,6 +208,11 @@ p {
 
 
 @media screen and (min-width: 320px) {
+    #container-title {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
     #totalTime {
         font-size: 1rem;
         color: black;

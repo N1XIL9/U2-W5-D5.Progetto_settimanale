@@ -26,7 +26,7 @@ let interval;
 
 function startTimer(){
   
-  let s = 60 ;
+  let s = 3 ;
   let timer = document.getElementById('timer');
     interval = setInterval(function(){
     timer.innerHTML = `Time: ${s} sec`;
@@ -34,6 +34,8 @@ function startTimer(){
         if(s < 0){
           clearInterval(interval);
           let lose = document.getElementById('finishGame')
+          audio.pause();
+          audio.currentTime = 0;
           lose.classList.add('active')
         }
     },1000);   

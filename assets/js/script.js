@@ -2,7 +2,8 @@
 // CREO UNA VARIABILE ARRAY CON GLI ELEMENTI 
 let arrayCards  = ['🎩', '🦉', '🌎','🎹','🦄', '🤣', '🐝', '💣','⏰','🎩','🦉', '🌎','🎹','🦄', '🤣', '🐝','💣','⏰'];
 let audio = new Audio ('./assets/audio/audio_backg.mp3');
-let audiocard = new Audio ('./assets/Sound/exatcards.mp3')
+let audiocard = new Audio ('./assets/Sound/exatcards.mp3');
+let flipaudio = new Audio ('./assets/Sound/flipsound.mp3');
 
 // DEVO GENERARE UN ARRAY E QUINDI CREARE UNA FUNZIONE CHE GENERA IN MANIERA RANDOM GLI ELEMENTI IN UN ARRAY. 
 function shuffle(a) {
@@ -89,6 +90,8 @@ function displayIcon(){
     let icons = [...icon];
   
     // FACCIO GIRARE LA CARTA E INSERISCO LA CARTA SCOPERTA NELL'ARRAY COMPArISON. 
+    flipaudio.play();
+    flipaudio.currentTime = 0;
     this.classList.toggle("show");
     arrayComparison.push(this);
   

@@ -220,7 +220,7 @@ p {
     }
 
     30% {
-        transform: perspective(300px) rotate3d(3, 5, 0, 5deg);
+        transform: perspective(300px) rotate3d(1, 0, 0, 5deg);
         animation-timing-function: ease-in;
     }
 
@@ -274,7 +274,6 @@ p {
         background-color: #840f0f;
         box-shadow: 1px 1px 5px 1px black;
         border-radius: 10px;
-        border: 1px solid white;
     }
 
     .button {
@@ -476,7 +475,6 @@ p {
         background-color: #840f0f;
         box-shadow: 1px 1px 5px 1px black;
         border-radius: 10px;
-        border: 1px solid white;
     }
 
     .button {

@@ -106,7 +106,7 @@ p {
     animation-name: guessed;
     animation-duration: .5s;
     background-color: #edad0c;
-    outline: 3px solid #d80000;
+    outline: 1px solid #d80000;
     border-radius: 1px 10px 10px 10px;
 }
 
@@ -478,7 +478,7 @@ p {
     }
 
     .icon {
-        font-size: 100px;
+        font-size: 95px;
     }
 
 }

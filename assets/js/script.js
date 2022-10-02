@@ -1,9 +1,14 @@
 
-// CREO UNA VARIABILE ARRAY CON GLI ELEMENTI 
+// CREO UNA VARIABILE ARRAY CON GLI ELEMENTI E VARABILI PER GLI EFFETTI AUDIO
 let arrayCards  = ['🎩', '🦉', '🌎','🎹','🦄', '🤣', '🐝', '💣','⏰','🎩','🦉', '🌎','🎹','🦄', '🤣', '🐝','💣','⏰'];
 let audio = new Audio ('./assets/audio/audio_backg.mp3');
 let audiocard = new Audio ('./assets/Sound/exatcards.mp3');
 let flipaudio = new Audio ('./assets/Sound/flipsound.mp3');
+let losesound = new Audio ('./assets/Sound/losesound.mp3');
+let winsound = new Audio ('./assets/Sound/win.mp3');
+let clicksound = new Audio ('./assets/Sound/click.mp3');
+
+
 
 // DEVO GENERARE UN ARRAY E QUINDI CREARE UNA FUNZIONE CHE GENERA IN MANIERA RANDOM GLI ELEMENTI IN UN ARRAY. 
 function shuffle(a) {
@@ -26,7 +31,7 @@ let interval;
 
 function startTimer(){
   
-  let s = 60 ;
+  let s = 60;
   let timer = document.getElementById('timer');
     interval = setInterval(function(){
     timer.innerHTML = `Time: ${s} sec`;
@@ -34,6 +39,7 @@ function startTimer(){
         if(s < 0){
           clearInterval(interval);
           let lose = document.getElementById('finishGame')
+          losesound.play();
           audio.pause();
           audio.currentTime = 0;
           lose.classList.add('active')
@@ -47,7 +53,8 @@ function startTimer(){
 
 function startGame(){
     let arrayShuffle = shuffle(arrayCards); 
-    audio.play()
+    clicksound.play();
+    audio.play();
 
 
     // RILUPISCO LA VARIABILE INTERVAL CHE TIENE TRACCIA DEL TEMPO TRASCORSO E AZZERO L'ArrayComparison 
@@ -147,7 +154,8 @@ function openWindow(){
     clearInterval(interval);
     document.getElementById('totalTime').innerHTML = timer.innerHTML
     modal.classList.add("active");
-    audio.pause()
+    winsound.play();
+    audio.pause();
     audio.currentTime = 0;
     closeWindows();
   }
@@ -168,24 +176,3 @@ function playAgain(){
   startGame();
 }
 
-
-
-
-// AGGIUNGO MUSICA DI SOTTOFONDO 
-// let x = document.getElementById("myAudio"); 
-
-// function playAudio() { 
-//   x.play(); 
-// } 
-
-// function pauseAudio() { 
-//   x.pause(); 
-// } 
-
-// let play = getElementById('button');
-
-// function startGame() {
-//   let audio = new Audio ('./assets/audio/audio_backg.mp3');
-//   audio.play()
-// }
-// play.addEventListener('click', startGame);

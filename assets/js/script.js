@@ -1,6 +1,7 @@
 
 // CREO UNA VARIABILE ARRAY CON GLI ELEMENTI 
 let arrayCards  = ['🎩', '🦉', '🌎','🎹','🦄', '🤣', '🐝', '💣','⏰','🎩','🦉', '🌎','🎹','🦄', '🤣', '🐝','💣','⏰'];
+let audio = new Audio ('./assets/audio/audio_backg.mp3');
 
 // DEVO GENERARE UN ARRAY E QUINDI CREARE UNA FUNZIONE CHE GENERA IN MANIERA RANDOM GLI ELEMENTI IN UN ARRAY. 
 function shuffle(a) {
@@ -39,8 +40,11 @@ function startTimer(){
 // REALIZZO LA FUNZIONE CHE SI OCCUPA SI FAR PARTIRE IL TUTTO E LA CHIAMO STARTGAME 
 // FACCIAMO PARTIRE LA FUNZIONE AL CLICK DEL PULSANTE START 
 
+
 function startGame(){
-    let arrayShuffle = shuffle(arrayCards);
+    let arrayShuffle = shuffle(arrayCards); 
+    audio.play()
+
 
     // RILUPISCO LA VARIABILE INTERVAL CHE TIENE TRACCIA DEL TEMPO TRASCORSO E AZZERO L'ArrayComparison 
     // E CREO UN ARRAY arrayComparison PER CONFRONTARE OGNI VOLTA LE DUE CARTE SCOPERTE.
@@ -80,7 +84,6 @@ function startGame(){
 function displayIcon(){
 
     let iconsFind = document.getElementsByClassName("find");
-  
     let icon = document.getElementsByClassName("icon");
     let icons = [...icon];
   
@@ -104,7 +107,7 @@ function displayIcon(){
         icons.forEach(function(item){
           item.classList.add('disabled');
         });
-        // CREAO LA FUNZIONE PER FAR RIMANERE LE DUE CARTE SCOPERTE PER 800 MILLISECONDI
+        // CREAO LA FUNZIONE PER FAR RIMANERE LE DUE CARTE SCOPERTE PER 700 MILLISECONDI
         setTimeout(function(){
           arrayComparison.forEach(function(elemento){
               elemento.classList.remove("show");
@@ -125,7 +128,7 @@ function displayIcon(){
   
 let modal = document.getElementById("modal");
 let timer = document.querySelector("#timer");
-let finishGame = document.getElementById('finishGame')
+let finishGame = document.getElementById('finishGame');
 
 // SE MI TROVA LA LUNGHEZZA DI TUTTE LE 20 CARDS MI DEVE PULIRE L'INTERVALLO E USCIRE IL MESSAGGIO 'WOW! YOU HAVE A GREAT MEMORY!!! 🧠
 let iconsFind = document.getElementsByClassName("find");
@@ -136,15 +139,16 @@ function openWindow(){
     clearInterval(interval);
     document.getElementById('totalTime').innerHTML = timer.innerHTML
     modal.classList.add("active");
+    audio.pause()
+    audio.currentTime = 0;
     closeWindows();
-    
   }
 }
 
 function closeWidows(){  
   closeicon.addEventListener("click", function(e){
-      modal.classList.remove("active");
-      startGame();
+    modal.classList.remove("active");
+    startGame();
   });
 }
 
@@ -160,12 +164,20 @@ function playAgain(){
 
 
 // AGGIUNGO MUSICA DI SOTTOFONDO 
-let x = document.getElementById("myAudio"); 
+// let x = document.getElementById("myAudio"); 
 
-function playAudio() { 
-  x.play(); 
-} 
+// function playAudio() { 
+//   x.play(); 
+// } 
 
-function pauseAudio() { 
-  x.pause(); 
-} 
+// function pauseAudio() { 
+//   x.pause(); 
+// } 
+
+// let play = getElementById('button');
+
+// function startGame() {
+//   let audio = new Audio ('./assets/audio/audio_backg.mp3');
+//   audio.play()
+// }
+// play.addEventListener('click', startGame);

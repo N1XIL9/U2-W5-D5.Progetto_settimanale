@@ -18,37 +18,37 @@
     <div id="container-title">
         <h1>MEMORY GAME</h1>
         <p>Powered By Nicola Lerra</p>
-        <audio id="myAudio">
+        <!-- <audio id="myAudio">
             <source src="./assets/audio/audio_backg.mp3" type="audio/ogg">
         </audio>
         <div class="but-container">
             <button id="button-audio" onclick="playAudio()" type="button"><i class="fa-solid fa-play"></i></button>
             <button id="button-audio" onclick="pauseAudio()" type="button"><i class="fa-solid fa-pause"></i></button>
         </div>
-    </div>
+    </div> -->
 
-    </h1>
-    <div class="container icon-grid" id="grid"></div>
-    <div class="container text-center">
-        <input type="button" id="button" class="button" onclick=startGame() value="START">
-        <div id="timer"></div>
-    </div>
-
-    <div id="modal">
-        <div class="content">
-            <h2>YOU HAVE A GREAT MEMORY!!! 🧠 </h2>
-            <p><span id=totalTime></span></p>
-            <p><input type="button" class="button" onclick=playAgain() value="PLAY AGAIN!"></p>
+        </h1>
+        <div class="container icon-grid" id="grid"></div>
+        <div class="container text-center">
+            <input type="button" id="button" class="button" onclick="startGame()" value="START">
+            <div id="timer"></div>
         </div>
-    </div>
 
-    <div id="finishGame">
-        <div class="content">
-            <h2>BRO YOU'RE SLOW AS A SNAIL 🐌 </h2>
-            <p><span id=totalTime> </span> </p>
-            <p><input type="button" class="button" onclick=playAgain() value="TRY AGAIN!"></p>
+        <div id="modal">
+            <div class="content">
+                <h2>YOU HAVE A GREAT MEMORY!!! 🧠 </h2>
+                <p><span id=totalTime></span></p>
+                <p><input type="button" class="button" onclick=playAgain() value="PLAY AGAIN!"></p>
+            </div>
         </div>
-    </div>
+
+        <div id="finishGame">
+            <div class="content">
+                <h2>BRO YOU'RE SLOW AS A SNAIL 🐌 </h2>
+                <p><span id=totalTime> </span> </p>
+                <p><input type="button" class="button" onclick=playAgain() value="TRY AGAIN!"></p>
+            </div>
+        </div>
 </body>
 <script src="./assets/js/script.js"></script>
 

@@ -120,7 +120,7 @@ p {
     animation-name: guessed;
     animation-duration: .5s;
     background-color: #edad0c;
-    /* outline: 2px solid #d80000; */
+    background-image: url('/assets/img/noisy-texture-100x100-o14.000000000000002-d10-c-f34379-t1.png');
     /* outline: 3px solid #d80000; */
     /* border-radius: 1px 10px 10px 10px; */
 
@@ -129,7 +129,7 @@ p {
     border-left: dotted;
     border-right: dotted;
     border-top: dotted;
-    /* outline: inset; */
+    outline: inset;
 }
 
 .button {

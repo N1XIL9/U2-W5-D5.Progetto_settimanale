@@ -40,6 +40,7 @@ function startTimer(){
           clearInterval(interval);
           let lose = document.getElementById('finishGame')
           audio.pause();
+          audio.currentTime = 0;
           loseSound.play();
           audio.currentTime = 0;
           lose.classList.add('active')

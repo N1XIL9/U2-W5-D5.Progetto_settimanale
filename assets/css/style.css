@@ -84,7 +84,7 @@ p {
     background: rgb(255, 0, 0);
     background: linear-gradient(180deg, rgba(255, 0, 0, 1) 32%, rgba(255, 126, 0, 1) 100%);
     box-shadow: 6px 1px 5px 1px black;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* border: 1px solid white; */
 }
 
@@ -100,7 +100,7 @@ p {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /*AGGIUNTO */
 }
 
@@ -291,7 +291,6 @@ p {
         margin-top: 10px;
         padding: 10px;
         background-color: #d35100;
-
         border-radius: 5px;
         border: none;
     }
@@ -372,7 +371,7 @@ p {
         height: 67px;
         /* background-color: #840f0f; */
         box-shadow: 1px 1px 5px 1px black;
-        border-radius: 10px;
+        /* border-radius: 10px; */
     }
 
     .button {
@@ -431,7 +430,7 @@ p {
         height: 129px;
         /* background-color: #840f0f; */
         box-shadow: 1px 1px 5px 1px black;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         border: 1px solid white;
     }
 
@@ -481,7 +480,7 @@ p {
         height: 129px;
         /* background-color: #840f0f; */
         box-shadow: 1px 1px 5px 1px black;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         border: 2px solid white;
 
     }
@@ -543,7 +542,7 @@ p {
         height: 178px;
         /* background-color: #840f0f; */
         box-shadow: 1px 1px 5px 1px black;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         border: 2px solid white;
     }
 
@@ -614,7 +613,7 @@ p {
         height: 295px;
         /* background-color: #840f0f; */
         box-shadow: 1px 1px 5px 1px black;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         border: 2px solid white;
     }
 

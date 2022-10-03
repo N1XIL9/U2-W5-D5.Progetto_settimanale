@@ -39,11 +39,11 @@ function startTimer(){
         if(s < 0){
           clearInterval(interval);
           let lose = document.getElementById('finishGame')
-          audio.pause();
-          audio.currentTime = 0;
+          lose.classList.add('active')
           loseSound.play();
           audio.currentTime = 0;
-          lose.classList.add('active')
+          audio.pause();
+          audio.currentTime = 0;
         }
     },1000);   
 }

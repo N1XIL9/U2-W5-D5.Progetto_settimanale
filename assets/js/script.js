@@ -31,7 +31,7 @@ let interval;
 
 function startTimer(){
   
-  let s = 60;
+  let s = 6;
   let timer = document.getElementById('timer');
     interval = setInterval(function(){
     timer.innerHTML = `Time: ${s} sec`;
@@ -40,7 +40,6 @@ function startTimer(){
           clearInterval(interval);
           let lose = document.getElementById('finishGame')
           losesound.play();
-          losesound.currentTime = 0;
           audio.pause();
           audio.currentTime = 0;
           lose.classList.add('active')

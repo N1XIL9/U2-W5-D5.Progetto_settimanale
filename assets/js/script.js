@@ -161,7 +161,7 @@ function openWindow(){
   }
 }
 
-function closeWidows(){  
+function closeWindows(){  
   closeicon.addEventListener("click", function(e){
     modal.classList.remove("active");
     startGame();

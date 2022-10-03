@@ -4,7 +4,7 @@ let arrayCards  = ['🎩', '🦉', '🌎','🎹','🦄', '🤣', '🐝', '💣',
 let audio = new Audio ('./assets/audio/audio_backg.mp3');
 let audiocard = new Audio ('./assets/Sound/exatcards.mp3');
 let flipaudio = new Audio ('./assets/Sound/flipsound.mp3');
-let losSound = new Audio ('./assets/Sound/lose.mp3');
+let sconfitta = new Audio ('./assets/Sound/lose.mp3');
 let winsound = new Audio ('./assets/Sound/win.mp3');
 let clicksound = new Audio ('./assets/Sound/click.mp3');
 
@@ -39,7 +39,7 @@ function startTimer(){
         if(s < 0){
           clearInterval(interval);
           let lose = document.getElementById('finishGame')
-          losSound.play();
+          sconfitta.play();
           audio.pause();
           audio.currentTime = 0;
           lose.classList.add('active')

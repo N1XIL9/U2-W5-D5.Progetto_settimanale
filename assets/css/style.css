@@ -81,9 +81,10 @@ p {
     margin: 7px 10px;
     width: 115px;
     height: 145px;
-    /* background: rgb(255, 0, 0);
-    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 32%, rgba(255, 126, 0, 1) 100%); */
+    background: rgb(255, 0, 0);
+    /* background: linear-gradient(180deg, rgba(255, 0, 0, 1) 32%, rgba(255, 126, 0, 1) 100%); */
     background-image: url('/assets/img/basketball.png');
+    /* -- AGGIUNTO */
 
     box-shadow: 6px 1px 5px 1px black;
     border-radius: 10px;
@@ -103,6 +104,7 @@ p {
     height: 100%;
     cursor: pointer;
     border-radius: 10px;
+    /*AGGIUNTO */
 }
 
 .disabled {
@@ -128,11 +130,11 @@ p {
     /* border-radius: 1px 10px 10px 10px; */
 
     /* NUOVO */
-    border-bottom: dotted;
+    /* border-bottom: dotted;
     border-left: dotted;
     border-right: dotted;
     border-top: dotted;
-    outline: inset;
+    outline: inset; */
 }
 
 .button {

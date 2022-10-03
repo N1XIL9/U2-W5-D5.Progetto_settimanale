@@ -38,8 +38,8 @@ function startTimer(){
         s--;
         if(s < 0){
           clearInterval(interval);
+          clicksound.play();
           let lose = document.getElementById('finishGame')
-          sconfitta.play();
           audio.pause();
           audio.currentTime = 0;
           lose.classList.add('active')
@@ -147,6 +147,7 @@ let finishGame = document.getElementById('finishGame');
 
 // SE MI TROVA LA LUNGHEZZA DI TUTTE LE 20 CARDS MI DEVE PULIRE L'INTERVALLO E USCIRE IL MESSAGGIO 'WOW! YOU HAVE A GREAT MEMORY!!! 🧠
 let iconsFind = document.getElementsByClassName("find");
+
 
 function openWindow(){  
 

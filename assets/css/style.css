@@ -84,7 +84,7 @@ p {
     background: rgb(255, 0, 0);
     background: linear-gradient(180deg, rgba(255, 0, 0, 1) 32%, rgba(255, 126, 0, 1) 100%);
     box-shadow: 6px 1px 5px 1px black;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* border: 1px solid white; */
 }
 
@@ -123,7 +123,7 @@ p {
     animation-duration: .5s;
     background-color: #edad0c;
     outline: 3px solid #d80000;
-    border-radius: 1px 10px 10px 10px;
+    /* border-radius: 1px 10px 10px 10px; */
 
     /* NUOVO */
     /* border-bottom: dotted;

@@ -122,7 +122,7 @@ p {
     animation-name: guessed;
     animation-duration: .5s;
     background-color: #edad0c;
-    outline: 3px solid #d80000;
+    border: 3px solid #d80000;
     /* border-radius: 1px 10px 10px 10px; */
 
     /* NUOVO */
@@ -637,7 +637,7 @@ p {
     }
 
     .icon {
-        font-size: 235px;
+        font-size: 216px;
     }
 
 }

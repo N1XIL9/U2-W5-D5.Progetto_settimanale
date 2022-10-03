@@ -31,7 +31,7 @@ let interval;
 
 function startTimer(){
   
-  let s = 6;
+  let s = 1000;
   let timer = document.getElementById('timer');
     interval = setInterval(function(){
     timer.innerHTML = `Time: ${s} sec`;

@@ -84,8 +84,9 @@ p {
     background: rgb(255, 0, 0);
     background: linear-gradient(180deg, rgba(255, 0, 0, 1) 32%, rgba(255, 126, 0, 1) 100%);
     box-shadow: 6px 1px 5px 1px black;
-    /* border-radius: 10px; */
-    /* border: 1px solid white; */
+    border-radius: 10px;
+    /*! in caso di problemi commentare il border*/
+    border: 1px solid white;
 }
 
 .timer {
@@ -100,7 +101,8 @@ p {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    /* border-radius: 10px; */
+    /*! in caso di problemi commentare il border-radius*/
+    border-radius: 10px;
     /*AGGIUNTO */
 }
 
@@ -113,7 +115,8 @@ p {
     animation-name: rotation-icon;
     animation-duration: .5s;
     background-color: white;
-    /* border-radius: 7px; */
+    /*! in caso di problemi commentare il border-radius*/
+    border-radius: 7px;
     visibility: visible;
     opacity: 1;
 }
@@ -122,8 +125,11 @@ p {
     animation-name: guessed;
     animation-duration: .5s;
     background-color: #edad0c;
-    outline: 3px solid #d80000;
-    /* border-radius: 1px 10px 10px 10px; */
+    background-image: url("../img/noisy-texture-100x100-o14.000000000000002-d10-c-f34379-t1.png");
+    outline: 4px solid #d80000;
+    /*! in caso di problemi commentare il border-radius*/
+    border-radius: 1px 10px 10px 10px;
+
 
     /* NUOVO */
     /* border-bottom: dotted;
